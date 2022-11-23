@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ PAGE</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" charset="utf-8"></script>
+
+    <style media="screen">
+        .accordions {
+            width: 85%;
+            margin: 100px auto;
+        }
+        
+        .accordions h3 {
+            text-align: center;
+            font-family: "Roboto", sans-serif;
+            font-weight: bold;
+        }
+        
+        .item {
+            background-color: green;
+            margin-bottom: 20px;
+            border: 1px solid #100e34;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+        
+        .item .title {
+            cursor: pointer;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .item .title.active-title {
+            background-color: #100e34;
+            color: #ffffff;
+        }
+        
+        .item .title h3 {
+            font-weight: 700;
+            margin: 0;
+            font-size: 17px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+        
+        .item .title i.fa-chevron-down {
+            transform: rotate(0);
+            transition: 0.3s;
+        }
+        
+        .item .title i.fa-chevron-down.chevron-top {
+            transform: rotate(-180deg);
+            color: #fa5019;
+        }
+        
+        .item .content {
+            display: none;
+            line-height: 1.7;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 0 0 5px 5px;
+            color: #100e34;
+        }
+        
+        .item .content.active {
+            display: block;
+        }
+        
+        .item .content p {
+            margin: 0;
+            font-family: "Nunito Sans", sans-serif;
+            font-size: 15px;
+        }
+        
+        .details {
+            background: #dce1f2;
+        }
+        
+        .details .detailed_info {
+            margin: 50px auto;
+        }
+        
+        .details img {
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .details h3 {
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            font-size: 19px;
+        }
+        
+        .details p {
+            font-family: "Nunito Sans", sans-serif;
+            font-size: 15px;
+            line-height: 1.5em;
+        }
+        
+        .details ul li {
+            font-family: "Nunito Sans", sans-serif;
+            font-size: 15px;
+            line-height: 1.7em;
+        }
+    </style>
+</head>
+
+<body style="background-image: linear-gradient(180deg, #5ee, #000bbb);">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <section id="faq">
+        <div class="container-faq">
+            <h1 style="color: red; text-align: center; padding-top: 15px;"><u>Frequently Asked Questions</u></h1>
+
+            <div class="container">
+                <div class="row">
+                    <div class="column">
+                        <div class="accordions">
+                            <div class="item">
+                                <div class="title" data-tab="item1">
+                                    <h3>What is Quanta Gold? <i class="fa fa-chevron-down"></i></h3>
+                                </div>
+                                <div class="content" id="item1">
+                                    <p>
+                                        Quanta Gold is a free online currency converter platform which lets your convert between any two currencies. We support all 161 major currencies used in 200 countries. Our currency API uses multiple sources for stable & reliable FX data. It's an easy
+                                        to use free platform for checking currency rates - no personal details/billing informaton required. We do not supply buy/sell spread data and so our rates are unsuitable for forex trading or processing cross currency
+                                        settlements.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="title" data-tab="item2">
+                                    <h3>How accurate is the currency data? <i class="fa fa-chevron-down"></i></h3>
+                                </div>
+                                <div class="content" id="item2">
+                                    <p>
+                                        We fetch currency data from a trusted public API called "ExchangeRate-API". ExchangeRate-API collects exchange rate data from multiple central banks & commercial sources and then use their own algorithm to blend these different datasets. This process
+                                        reduces the impact of an incorrect outlying conversion rate supplied by one source. Our exchange rates are classed as indicative midpoint rates. These are accurate enough for tasks like price estimations in an e-commerce
+                                        store or stats on a dashboard.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="title" data-tab="item3">
+                                    <h3>How often do the exchange rates update? <i class="fa fa-chevron-down"></i></h3>
+                                </div>
+                                <div class="content" id="item3">
+                                    <p>
+                                        Updated data is available every 24 hours.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="title" data-tab="item4">
+                                    <h3>Where does the API get foreign exchange rate data from? <i class="fa fa-chevron-down"></i></h3>
+                                </div>
+                                <div class="content" id="item4">
+                                    <p>
+                                        Statement from ExchangeRate-API: "We collect public reference data from a number of central banks and commercial sources around the world. An example would be the reference rates released by the European Central Bank each day."
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="title" data-tab="item5">
+                                    <h3>Where does Quanta Gold get it's currency information from? <i class="fa fa-chevron-down"></i></h3>
+                                </div>
+                                <div class="content" id="item5">
+                                    <p>
+                                        All currency information is fetched from online sources such as Wikipedia.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".title").click(function(e) {
+                var item = $(this).attr("data-tab");
+                $("#" + item).slideToggle().parent().siblings().find(".content").slideUp();
+
+                $(this).toggleClass("active-title");
+                $("#" + item).parent().siblings().find(".title").removeClass("active-title");
+
+                $("i.fa-chevron-down", this).toggleClass("chevron-top");
+                $("#" + item).parent().siblings().find(".title i.fa-chevron-down").removeClass("chevron-top");
+            });
+        });
+    </script>
+</body>
+
+</html>

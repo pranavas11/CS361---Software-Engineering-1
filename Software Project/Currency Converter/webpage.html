@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quanta Gold Currexhange</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body onload="feature()">
+    <dialog id="new-feature">
+        <h1 style="display: flex; justify-content: center; color: darkcyan;"><u>NEW FEATURE</u></h1><br>
+        <b><h3 style="display: flex; justify-content: center; font-size: large;">You can now view currency information for any two user selected currencies.</h3></b><br>
+        <button id="ok"><b>OK!</b></button>
+    </dialog>
+
+    <script>
+        function feature() {
+            let dialog = document.getElementById("new-feature");
+            dialog.showModal();
+            document.getElementById("ok").addEventListener("click", function() {
+                dialog.close();
+            });
+        }
+    </script>
+
+    <div class="main-container">
+        <div class="container">
+            <div class="heading">
+                <h1>CURRENCY CONVERTER</h1>
+            </div>
+
+            <div class="rates">
+                <div class="rate1"></div>
+                <div class="rate2"></div>
+            </div>
+
+            <div class="main">
+                <div class="initial-rate">
+                    <div class="options">
+                        <b><label for="currency" style="color: navy;">Choose Currency 1:</label></b> <br><br>
+                        <select name="currency" id="currency"></select>
+                        <br><br><br>
+                    </div>
+
+                    <div class="input">
+                        <input type="number" min="1">
+                    </div>
+                </div>
+
+                <span class="material-icons swap" style="font-size: 50px;">swap_horiz</span>
+
+                <div class="target-rate">
+                    <div class="options">
+                        <b><label for="currency" style="color: orange;">Choose Currency 2:</label></b> <br><br>
+                        <select name="currency" id="currency"></select>
+                        <br><br><br>
+                    </div>
+
+                    <div class="input">
+                        <input disabled type="number">
+                        <br><br><br><br>
+                    </div>
+                </div>
+            </div>
+
+            <button class="result">CONVERT</button> <br><br>
+            <button class="clear">CLEAR</button>
+        </div>
+
+        <div class="information">
+            <div class="instructions">
+                <h3>INSTRUCTIONS</h3>
+                <h5>1. Choose your two desired currencies from the dropdown menu.</h5>
+                <h5>2. Enter the desired amount inside the textbox on the left-hand side.</h5>
+                <h5>3. Click "Convert" to see the conversion rate.</h5>
+                <h5>4. Click "Clear" to clear the screen.</h5>
+                <h5>5. Click the swap arrow in between the two textboxes to swap your two selected currencies.</h5>
+            </div>
+
+            <br>
+
+            <div class="currency-information">
+                <div class="currency1">
+                    <h3><u>Currency 1 Information</u></h3>
+                    <p id="c1" style="font-size: medium;"></p>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="currency2">
+                    <h3><u>Currency 2 Information</u></h3>
+                    <p id="c2" style="font-size: medium;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="faq">
+        <u><h1 style="color: darkred; padding-left: 125px;">FAQ</h1></u>
+        <h3>Have Questions? Visit the FAQ page <a href="/faq.html" target="_blank">here</a>.</h3>
+    </div>
+
+    <script src="/currency_converter.js"></script>
+</body>
+
+</html>
